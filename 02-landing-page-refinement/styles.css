@@ -237,3 +237,14 @@ footer p {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .primary-action {
+    transition: transform 200ms ease-out;
+  }
+
+  .primary-action:hover,
+  .primary-action:focus-visible {
+    transform: translateY(-0.2rem);
+  }
+}

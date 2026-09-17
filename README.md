@@ -5,7 +5,7 @@ This repository contains the instructor's working example for the Pokémon Brows
 | Stage | Guided Build article | Status |
 | --- | --- | --- |
 | [`01-landing-page-first-draft/`](01-landing-page-first-draft/) | Build the first landing-page draft | Complete |
-| [`02-landing-page-refinement/`](02-landing-page-refinement/) | Landing page refinement | Starting copy; refinement not implemented |
+| [`02-landing-page-refinement/`](02-landing-page-refinement/) | Landing page refinement | Complete |
 
 Open the `index.html` file inside the stage you want to inspect. A stage does not depend on files from another stage.
 
