@@ -191,16 +191,12 @@ h3 {
 }
 
 .feature-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--space-md);
   margin-block-start: var(--space-lg);
 }
 
 .feature-card {
-  flex-basis: 100%;
-  flex-grow: 1;
-  flex-shrink: 1;
   margin: 0;
   border: 2px solid var(--color-brand);
   border-top: 0.5rem solid var(--color-highlight);
@@ -229,7 +225,7 @@ footer p {
   margin: 0;
 }
 
-/* The header and feature cards now have room for a wider arrangement. */
+/* The header and feature Grid now have room for a wider arrangement. */
 @media (min-width: 48rem) {
   .site-header {
     flex-direction: row;
@@ -237,7 +233,7 @@ footer p {
     justify-content: space-between;
   }
 
-  .feature-card {
-    flex-basis: 13rem;
+  .feature-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
