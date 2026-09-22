@@ -221,6 +221,44 @@ h3 {
   margin-block: var(--space-xl);
 }
 
+#pokedex-filter {
+  margin-block-end: var(--space-lg);
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  padding: var(--space-md);
+}
+
+#pokedex-filter label {
+  display: block;
+  margin-block-end: var(--space-xs);
+  font-weight: bold;
+}
+
+#type-filter {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 20rem;
+  min-block-size: 2.75rem;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-small);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  padding-block: var(--space-xs);
+  padding-inline: var(--space-sm);
+  font: inherit;
+}
+
+#type-filter:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+#filter-status {
+  margin-block: var(--space-sm) 0;
+  color: var(--color-muted);
+}
+
 .pokedex-list {
   display: grid;
   gap: var(--space-md);

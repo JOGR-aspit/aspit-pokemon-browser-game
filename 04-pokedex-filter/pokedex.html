@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokédex · Pokémon Trail</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="pokedex.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -32,8 +33,21 @@
       <section class="pokedex-catalog">
         <h2>Pokémon in this region</h2>
 
+        <div id="pokedex-filter" hidden>
+          <label for="type-filter">Filter by type</label>
+          <select id="type-filter" name="typeFilter">
+            <option value="all">All types</option>
+            <option value="grass">Grass</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="electric">Electric</option>
+            <option value="ghost">Ghost</option>
+          </select>
+          <p id="filter-status" role="status">Showing all 8 Pokémon.</p>
+        </div>
+
         <ul class="pokedex-list">
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="grass">
             <p class="pokedex-number">#0495</p>
             <h3>Snivy</h3>
             <img
@@ -48,7 +62,7 @@
             <p class="pokedex-note">Snivy suits the leaf-covered paths at the start of the trail.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="fire">
             <p class="pokedex-number">#0909</p>
             <h3>Fuecoco</h3>
             <img
@@ -63,7 +77,7 @@
             <p class="pokedex-note">Fuecoco gives new trainers a bright companion for the first route.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="water">
             <p class="pokedex-number">#0158</p>
             <h3>Totodile</h3>
             <img
@@ -78,7 +92,7 @@
             <p class="pokedex-note">Totodile fits the streams that cross the lower trail.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="grass">
             <p class="pokedex-number">#0761</p>
             <h3>Bounsweet</h3>
             <img
@@ -93,7 +107,7 @@
             <p class="pokedex-note">Bounsweet can appear near the berry grove beyond the trailhead.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="fire">
             <p class="pokedex-number">#0058</p>
             <h3>Growlithe</h3>
             <img
@@ -108,7 +122,7 @@
             <p class="pokedex-note">Growlithe can appear beside the warm stones on the eastern path.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="water">
             <p class="pokedex-number">#0060</p>
             <h3>Poliwag</h3>
             <img
@@ -123,7 +137,7 @@
             <p class="pokedex-note">Poliwag can appear near the ponds along the western path.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="electric">
             <p class="pokedex-number">#0179</p>
             <h3>Mareep</h3>
             <img
@@ -138,7 +152,7 @@
             <p class="pokedex-note">Mareep can appear in the open fields beyond the trail.</p>
           </li>
 
-          <li class="pokedex-entry">
+          <li class="pokedex-entry" data-types="ghost">
             <p class="pokedex-number">#0200</p>
             <h3>Misdreavus</h3>
             <img

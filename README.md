@@ -7,6 +7,7 @@ This repository contains the instructor's working example for the Pokémon Brows
 | [`01-landing-page-first-draft/`](01-landing-page-first-draft/) | Build the first landing-page draft | Complete |
 | [`02-landing-page-refinement/`](02-landing-page-refinement/) | Landing page refinement | Complete |
 | [`03-pokedex-catalog/`](03-pokedex-catalog/) | Build the Pokédex catalog | Complete |
+| [`04-pokedex-filter/`](04-pokedex-filter/) | Filter the Pokédex with JavaScript | Complete |
 
 Open the `index.html` file inside the stage you want to inspect. A stage does not depend on files from another stage.
 
