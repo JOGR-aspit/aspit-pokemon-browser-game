@@ -1,0 +1,306 @@
+:root {
+  --color-page: #e8f4ff;
+  --color-surface: #fffdf5;
+  --color-text: #18233f;
+  --color-muted: #4b5876;
+  --color-brand: #2f5db3;
+  --color-brand-strong: #19376d;
+  --color-accent: #cf3030;
+  --color-highlight: #f3cf3f;
+  --color-focus: #762a80;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  --radius-small: 0.25rem;
+  --radius-card: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-page);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: 90%;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 0.5rem solid var(--color-highlight);
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  background-color: var(--color-brand-strong);
+  padding-block: var(--space-lg);
+  padding-inline: var(--space-md);
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.site-name a {
+  color: var(--color-highlight);
+}
+
+.nav-list,
+.action-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: var(--color-surface);
+  padding-block: var(--space-xs);
+  padding-inline: var(--space-sm);
+}
+
+a {
+  color: var(--color-brand-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.2em;
+}
+
+a:focus-visible {
+  border-radius: var(--radius-small);
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.site-header a:focus-visible {
+  outline: 3px solid var(--color-highlight);
+}
+
+.nav-list a[aria-current="page"] {
+  border-radius: var(--radius-small);
+  color: var(--color-brand-strong);
+  background-color: var(--color-highlight);
+  font-weight: bold;
+  text-decoration-thickness: 0.2em;
+}
+
+main {
+  padding-block: var(--space-lg);
+}
+
+.hero,
+.placeholder-page,
+.pokedex-introduction {
+  border: 2px solid var(--color-brand);
+  border-top: 0.5rem solid var(--color-accent);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  padding: var(--space-lg);
+}
+
+.section-label {
+  margin-block: 0 var(--space-xs);
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-brand-strong);
+}
+
+h1 {
+  margin-block: 0 var(--space-sm);
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-block: 0 var(--space-md);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-block: 0 var(--space-xs);
+  font-size: 1.125rem;
+}
+
+.introduction,
+.feature-overview > p,
+.placeholder-page > p,
+.pokedex-introduction > p {
+  max-width: 42rem;
+}
+
+.introduction {
+  color: var(--color-muted);
+  font-size: 1.125rem;
+}
+
+.action-list {
+  margin-block-start: var(--space-lg);
+  align-items: flex-start;
+}
+
+.action-link {
+  display: inline-block;
+  border: 2px solid var(--color-brand-strong);
+  border-radius: var(--radius-small);
+  padding-block: var(--space-sm);
+  padding-inline: var(--space-md);
+  font-weight: bold;
+}
+
+.primary-action {
+  color: var(--color-surface);
+  background-color: var(--color-accent);
+}
+
+.secondary-action {
+  color: var(--color-brand-strong);
+  background-color: var(--color-highlight);
+}
+
+.feature-overview {
+  margin-block: var(--space-xl);
+}
+
+.feature-list {
+  display: grid;
+  gap: var(--space-md);
+  margin-block-start: var(--space-lg);
+}
+
+.feature-card {
+  margin: 0;
+  border: 2px solid var(--color-brand);
+  border-top: 0.5rem solid var(--color-highlight);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  padding: var(--space-lg);
+}
+
+.feature-card p {
+  margin-block: var(--space-xs) 0;
+}
+
+.placeholder-status {
+  border-left: 0.25rem solid var(--color-accent);
+  background-color: var(--color-page);
+  padding: var(--space-md);
+}
+
+.pokedex-catalog {
+  margin-block: var(--space-xl);
+}
+
+.pokedex-list {
+  display: grid;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pokedex-entry {
+  min-inline-size: 0;
+  border: 2px solid var(--color-brand);
+  border-top: 0.5rem solid var(--color-highlight);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  padding: var(--space-lg);
+}
+
+.pokedex-number {
+  margin: 0;
+  color: var(--color-muted);
+  font-weight: bold;
+}
+
+.pokedex-entry h3 {
+  margin-block-end: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.pokedex-image {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 20rem;
+  block-size: auto;
+  margin-inline: auto;
+  border-radius: var(--radius-card);
+}
+
+.pokedex-fact {
+  margin-block: var(--space-md) 0;
+}
+
+.pokedex-note {
+  margin-block: var(--space-md) 0;
+  color: var(--color-muted);
+}
+
+footer {
+  border-top: 2px solid var(--color-brand);
+  padding-block: var(--space-lg);
+  color: var(--color-muted);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* The header and repeated page collections now have room for wider arrangements. */
+@media (min-width: 48rem) {
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pokedex-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .primary-action {
+    transition: transform 200ms ease-out;
+  }
+
+  .primary-action:hover,
+  .primary-action:focus-visible {
+    transform: translateY(-0.2rem);
+  }
+}
