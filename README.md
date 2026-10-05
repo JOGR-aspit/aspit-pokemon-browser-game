@@ -10,6 +10,7 @@ This repository contains the instructor's working example for the Pokémon Brows
 | [`04-pokedex-filter/`](04-pokedex-filter/) | Filter the Pokédex with JavaScript | Complete |
 | [`05-trainer-setup/`](05-trainer-setup/) | Start the game from trainer setup | Complete |
 | [`06-overworld-map/`](06-overworld-map/) | Render the overworld map | Complete |
+| [`07-trainer-position/`](07-trainer-position/) | Render the trainer position | Complete |
 
 Open the `index.html` file inside the stage you want to inspect. A stage does not depend on files from another stage.
 
