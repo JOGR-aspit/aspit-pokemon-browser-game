@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game · Pokémon Trail</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="site-name"><a href="index.html">Pokémon Trail</a></p>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html" aria-current="page">Game</a></li>
+          <li><a href="pokedex.html">Pokédex</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="game-introduction">
+        <p class="section-label">Game page</p>
+        <h1>Pokémon Trail game</h1>
+        <p>
+          Create a fictional trainer and choose the starter Pokémon that will
+          travel with you. This setup creates the state you will use to explore the map.
+        </p>
+      </section>
+
+      <section class="trainer-setup" aria-labelledby="trainer-setup-heading">
+        <h2 id="trainer-setup-heading">Set up your trainer</h2>
+        <p>Use a fictional trainer name and choose one starter.</p>
+
+        <form class="trainer-form" id="trainer-form">
+          <div class="form-field">
+            <label for="trainer-name">Trainer name</label>
+            <p id="trainer-name-help">Enter a fictional name.</p>
+            <input
+              id="trainer-name"
+              name="trainerName"
+              type="text"
+              aria-describedby="trainer-name-help trainer-name-error"
+            >
+            <p
+              class="validation-message"
+              id="trainer-name-error"
+              role="status"
+            ></p>
+          </div>
+
+          <div class="form-field">
+            <label for="starter-choice">Starter Pokémon</label>
+            <p id="starter-help">Choose one starter for this game.</p>
+            <select
+              id="starter-choice"
+              name="starterChoice"
+              aria-describedby="starter-help starter-error"
+            >
+              <option value="">Choose a starter</option>
+              <option value="snivy">Snivy</option>
+              <option value="fuecoco">Fuecoco</option>
+              <option value="totodile">Totodile</option>
+            </select>
+            <p
+              class="validation-message"
+              id="starter-error"
+              role="status"
+            ></p>
+          </div>
+
+          <button type="submit">Start game</button>
+        </form>
+      </section>
+
+      <section class="overworld" id="overworld-section" aria-labelledby="overworld-heading">
+        <h2 id="overworld-heading">Overworld map</h2>
+        <p>
+          Read the map from the top left to the bottom right. Each tile uses a
+          letter and color to identify its terrain. The trainer image marks your
+          current tile; the letter still identifies its terrain.
+        </p>
+
+        <ul class="map-legend" aria-label="Map legend">
+          <li>
+            <span class="map-key map-key--center">C</span>
+            Pokémon Center
+          </li>
+          <li>
+            <span class="map-key map-key--path">P</span>
+            Path
+          </li>
+          <li>
+            <span class="map-key map-key--grass">G</span>
+            Tall grass
+          </li>
+          <li>
+            <span class="map-key map-key--blocked">X</span>
+            Blocked terrain
+          </li>
+        </ul>
+
+        <ol
+          class="overworld-map"
+          id="overworld-map"
+          aria-label="Five by five overworld map"
+        ></ol>
+
+        <section class="movement" aria-labelledby="movement-heading">
+          <h3 id="movement-heading">Move one step</h3>
+          <p>Start a trainer, then choose one direction for each step.</p>
+          <div class="movement-controls">
+            <button id="move-north" type="button" disabled>North</button>
+            <button id="move-south" type="button" disabled>South</button>
+            <button id="move-west" type="button" disabled>West</button>
+            <button id="move-east" type="button" disabled>East</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="battle" id="battle-section" aria-labelledby="battle-heading" hidden>
+        <h2 id="battle-heading" tabindex="-1">Wild encounter</h2>
+        <p>Choose one battle action. Attack may trigger one wild response.</p>
+        <img id="wild-image" class="wild-image" src="assets/bounsweet.png" width="475" height="475" alt="">
+        <p id="wild-name" class="wild-name"></p>
+        <p>Wild hit points: <span id="wild-hit-points"></span></p>
+        <p>Your starter: <span id="battle-starter"></span></p>
+        <div class="battle-controls">
+          <button id="battle-attack" type="button" disabled>Attack</button>
+          <button id="battle-catch" type="button" disabled>Throw Poké Ball</button>
+          <button id="battle-run" type="button" disabled>Run</button>
+        </div>
+        <p>To start a new game instead, <a href="#trainer-name">return to trainer setup</a> and select Start game.</p>
+      </section>
+
+      <section class="game-summary" aria-labelledby="game-summary-heading">
+        <h2 id="game-summary-heading">Current game</h2>
+        <ul class="game-facts">
+          <li>Trainer: <span id="trainer-output">No trainer yet.</span></li>
+          <li>Starter: <span id="starter-output">No starter selected.</span></li>
+          <li>Hit points: <span id="hit-points-output">Not available.</span></li>
+          <li>Position: <span id="position-output">Not set.</span></li>
+          <li>Encounter: <span id="encounter-output">No active encounter.</span></li>
+          <li>Caught Pokémon: <span id="caught-output">0</span></li>
+        </ul>
+        <p id="game-status" role="status">
+          Enter a fictional trainer name and choose a starter.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Pokémon Trail · Browser game project</p>
+    </footer>
+  </body>
+</html>
